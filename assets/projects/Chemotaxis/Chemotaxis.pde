@@ -74,7 +74,7 @@ void draw() {
     text (add, 30, 120);
     textAlign(RIGHT);
     text (sz, 570, 120);
-    textSize (20);
+    textSize (30);
     textAlign(LEFT);
     text ("[w] increase speed", 30, 150);
     text ("[q] decrease speed", 30, 180);
