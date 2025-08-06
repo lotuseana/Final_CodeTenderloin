@@ -24,11 +24,11 @@ void setup() {
   textSize(50);
   cursor(CROSS);
   textAlign(CENTER);
-  size (1000, 1000);
+  size (600, 600);
   obs = new e[numof];
   for (int i=0; i < numof; i++) {
-    stx[i] = (int)(Math.random()*501)+250;
-    sty[i] = (int)(Math.random()*501)+150;
+    stx[i] = (int)(Math.random()*301)+150;
+    sty[i] = (int)(Math.random()*301)+150;
     obs[i] = new e(stx[i], sty[i]);
     r[i]=255;
     g[i]=0;
@@ -69,30 +69,30 @@ void draw() {
     accF = Math.round(acc*100);
     accF = accF/100;
     fill(255);
-    text("[e] reset", 500,780);
+    text("[e] reset", 300,480);
     textAlign(LEFT);
-    text (add, 50, 200);
+    text (add, 30, 120);
     textAlign(RIGHT);
-    text (sz, 950, 200);
+    text (sz, 570, 120);
     textSize (30);
     textAlign(LEFT);
-    text ("[w] increase speed", 50, 250);
-    text ("[q] decrease speed", 50, 300);
+    text ("[w] increase speed", 30, 150);
+    text ("[q] decrease speed", 30, 180);
     textAlign(RIGHT);
-    text ("[s] increase size", 950, 250);
-    text ("[q] decrease size", 950, 300);
+    text ("[s] increase size", 570, 150);
+    text ("[q] decrease size", 570, 180);
     textAlign(CENTER);
     textSize (50);
     if(numof==1){
-    text(count + " / 1", 200, 100);
-    text(milli/1000.0, 500, 100);
-    text(accF+" %", 800, 100);
-    text("[1] change mode", 500,850);
+    text(count + " / 1", 120, 60);
+    text(milli/1000.0, 300, 60);
+    text(accF+" %", 480, 60);
+    text("[1] change mode", 300,510);
   }
     if(numof==5){
-    text(count + " / 5", 300, 100);
-    text(milli/1000.0, 600, 100);
-    text("[2] change mode", 500,850);
+    text(count + " / 5", 180, 60);
+    text(milli/1000.0, 360, 60);
+    text("[2] change mode", 300,510);
   }
     milli+=10;
     if (numof==count){
@@ -106,18 +106,18 @@ class e {
     myy = y;
   }
   void move(int o) {
-    if ((myx<150+o && mouseX>myx)||(myy<150+o && mouseY>myy)||(myx>850-o && mouseX<myx)||(myy>850-o && mouseY<myy)) {
+    if ((myx<90+o && mouseX>myx)||(myy<90+o && mouseY>myy)||(myx>510-o && mouseX<myx)||(myy>510-o && mouseY<myy)) {
       if(dist(mouseX,mouseY,myx,myy)<100){
-        if(myx<150+o && mouseX>myx){
+        if(myx<90+o && mouseX>myx){
           myx+=10+add;
         }
-        if(myy<150+o && mouseY>myy){
+        if(myy<90+o && mouseY>myy){
           myy+=10+add;
         }
-        if(myx>850-o && mouseX<myx){
+        if(myx>510-o && mouseX<myx){
           myx-=10-add;
         }
-        if(myy>850-o && mouseX<myx){
+        if(myy>510-o && mouseX<myx){
           myy-=10-add;
         }
       }
@@ -152,13 +152,13 @@ class e {
     if (dist(mouseX, mouseY, myx, myy)>100) {
       if (dir[i]== 0) {
         myx+=5+add;
-        if (myx>850) {
+        if (myx>510) {
           dir[i]=1;
         }
       }
       if (dir[i] == 1) {
         myx-=5+add;
-        if (myx<150) {
+        if (myx<90) {
           dir[i]=0;
         }
       }
@@ -175,15 +175,15 @@ class e {
 }
 void end(){
   fill(0);
-  rect(0,0,1000,1000);
+  rect(0,0,600,600);
   fill(255,0,0);
   textSize(100);
-  text(milli/1000.0, 500,400);
+  text(milli/1000.0, 300,240);
   noFill();
   textSize(50);
-  text ("[e] retry", 500,600);
+  text ("[e] retry", 300,360);
   if(numof==1){
-  text (accF+" %", 500,700);}
+  text (accF+" %", 300,420);}
   noLoop();
  }
 void reset(){
@@ -194,8 +194,8 @@ void reset(){
   textSize(50);
   milli=0;
     for (int i=0; i < numof; i++) {
-    stx[i] = (int)(Math.random()*501)+250;
-    sty[i] = (int)(Math.random()*501)+150;
+    stx[i] = (int)(Math.random()*301)+150;
+    sty[i] = (int)(Math.random()*301)+150;
     obs[i] = new e(stx[i], sty[i]);
     r[i]=255;
     g[i]=0;

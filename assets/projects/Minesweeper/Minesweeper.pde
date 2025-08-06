@@ -10,7 +10,7 @@ private MSButton startButton;
 
 void setup ()
 {
-  size(595, 595);
+  size(600, 600);
   textSize(25);
   textAlign(CENTER, CENTER);
   strokeWeight(5);

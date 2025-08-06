@@ -8,7 +8,7 @@ int fOpac = 255;
 part[]obs = new part[numof];
 void setup() {
   frameRate (100);
-  size (800, 800);
+  size (600, 600);
   reset();
 }
 void draw() {

@@ -13,7 +13,7 @@ boolean depleted = false;
 public void setup()
 {
   frameRate(100);
-  size(500, 500);
+  size(600, 600);
   for (int i =0; i<stars.length; i++) {
     stars[i]= new Star();
   }
