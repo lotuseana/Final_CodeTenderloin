@@ -26,6 +26,12 @@ body {
     justify-content: center;
 }
 
+canvas {
+    height: 600px;
+    width: auto;
+    border: 2px solid #ff0080;
+}
+
 header {
     background: #1a1a1a;
     border-bottom: 2px solid #ff0080;
