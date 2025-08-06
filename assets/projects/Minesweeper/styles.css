@@ -45,10 +45,4 @@ header h1 {
     letter-spacing: 1px;
 }
 
-footer {
-    font-style: italic;
-    font-size: 80%;
-    color: #cccccc;
-    padding: 0.5rem 0;
-    border-top: 2px solid #ff0080;
-}
+
