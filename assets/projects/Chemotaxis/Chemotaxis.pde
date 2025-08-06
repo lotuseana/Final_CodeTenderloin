@@ -80,7 +80,7 @@ void draw() {
     text ("[q] decrease speed", 30, 180);
     textAlign(RIGHT);
     text ("[s] increase size", 570, 150);
-    text ("[q] decrease size", 570, 180);
+    text ("[a] decrease size", 570, 180);
     textAlign(CENTER);
     textSize (50);
     if(numof==1){

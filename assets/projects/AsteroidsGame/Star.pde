@@ -3,8 +3,8 @@ class Star //note that this class does NOT extend Floater
   private double myX, myY,mySize;
   private int myColor,myOpac;
   public Star() {
-    myX=(Math.random()*500);
-    myY=(Math.random()*500);
+    myX=(Math.random()*600);
+    myY=(Math.random()*600);
     myOpac = (int)(Math.random()*200)+40;
     mySize=(int)(Math.random()*5+2);
     myColor = 255;
