@@ -29,7 +29,7 @@ public void draw()
     stars[i].show();
   }
   fill(0);
-  rect(30, 400, 150, 80);
+  rect(30, 480, 150, 80);
   for (int i =0; i<rocks.size(); i++) {
     for (int j=0; j<16; j++) {
       for (int k=0; k<11; k++) {
@@ -116,13 +116,13 @@ public void end() {
   ended = true;
   noStroke();
   fill(255, 150);
-  rect(100, 150, 300, 150);
+  rect(150, 200, 300, 150);
   textSize(40);
   textAlign(CENTER);
   fill(255, 10, 10);
-  text("GAME OVER", 250, 230);
+  text("GAME OVER", 300, 280);
   textSize(20);
-  text("[e] - restart", 250, 290);
+  text("[e] - restart", 300, 340);
 }
 public void restart() {
   fired = false;
@@ -141,12 +141,12 @@ public void restart() {
 public void ui() {
   noStroke();
   fill(255, 50);
-  rect(30, 400, 150, 80);
+  rect(30, 480, 150, 80);
   stroke(255);
-  line(30, 480, 30, 460);
-  line(30, 480, 80, 480);
-  line(180, 400, 180, 420);
-  line(180, 400, 130, 400);
+  line(30, 560, 30, 540);
+  line(30, 560, 80, 560);
+  line(180, 480, 180, 500);
+  line(180, 480, 130, 480);
   noStroke();
   for (int i=0; i<200; i+=20) {
     fill(55+i, opac[9-i/20]);
@@ -160,10 +160,10 @@ public void ui() {
   fill(255);
   textAlign(LEFT);
   textSize(15);
-  text("score", 50, 430);
-  text("elapsed", 50, 460);
+  text("score", 50, 510);
+  text("elapsed", 50, 540);
   textAlign(RIGHT);
-  text(score, 160, 430);
-  text(milliseconds/1000+" .", 160, 460);
+  text(score, 160, 510);
+  text(milliseconds/1000+" .", 160, 540);
  // text(decim, 160, 460);
 }
